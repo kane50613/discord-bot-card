@@ -63,6 +63,7 @@ export default async function () {
 						style={{
 							display: "flex",
 							flexDirection: "column",
+							alignContent: "space-between",
 						}}
 					>
 						<span
