@@ -11,7 +11,7 @@ const interPromise = fetch(
 	new URL("../../assets/Inter-Bold.ttf", import.meta.url),
 ).then((r) => r.arrayBuffer());
 
-const edgeConfig = process.env.EDGE_CONFIG || process.env.VERCEL_EDGE_CONFIG;
+const edgeConfig = process.env.EDGE_CONFIG || process.env.EXTERNAL_EDGE_CONFIG;
 
 const client = edgeConfig ? createClient(edgeConfig) : undefined;
 
