@@ -11,7 +11,11 @@ const interPromise = fetch(
 	new URL("../../assets/Inter-Bold.ttf", import.meta.url),
 ).then((r) => r.arrayBuffer());
 
-const edgeConfig = process.env.EDGE_CONFIG || process.env.CONFIG_URL;
+const edgeConfig =
+	process.env.EDGE_CONFIG ||
+	process.env.CONFIG_URL ||
+	(process.env.CONFIG_ID &&
+		`https://edge-config.vercel.com/${process.env.EDGE_CONFIG_ID}?token=${process.env.EDGE_CONFIG_TOKEN}`);
 
 const client = edgeConfig ? createClient(edgeConfig) : undefined;
 
@@ -27,7 +31,7 @@ export default async function () {
 				style={{
 					fontFamily: "noto",
 					background: "linear-gradient(135deg, #3a3f5c, #202332)",
-					borderRadius: 5,
+					borderRadius: 7,
 					color: "white",
 					width: "100%",
 					height: "100%",
