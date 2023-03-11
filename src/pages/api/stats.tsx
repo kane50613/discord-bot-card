@@ -1,5 +1,5 @@
 import { ImageResponse } from "@vercel/og";
-import { get } from "@vercel/edge-config";
+import { createClient } from "@vercel/edge-config";
 
 export const config = {
 	runtime: "edge",
@@ -11,10 +11,14 @@ const interPromise = fetch(
 	new URL("../../assets/Inter-Bold.ttf", import.meta.url),
 ).then((r) => r.arrayBuffer());
 
+const edgeConfig = process.env.EDGE_CONFIG || process.env.VERCEL_EDGE_CONFIG;
+
+const client = edgeConfig ? createClient(edgeConfig) : undefined;
+
 export default async function () {
 	const inter = await interPromise;
 
-	const guilds = process.env.EDGE_CONFIG ? await get("guilds") : 123456;
+	const guilds = (await client?.get("guilds")) || 123456;
 
 	return new ImageResponse(
 		(
