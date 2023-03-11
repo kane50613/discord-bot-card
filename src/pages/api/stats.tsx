@@ -18,7 +18,7 @@ const edgeConfig =
 
 const client = edgeConfig ? createClient(edgeConfig) : undefined;
 
-export default async function () {
+export default async function Stats() {
 	const inter = await interPromise;
 
 	const guilds = (await client?.get("guilds")) || 123456;
