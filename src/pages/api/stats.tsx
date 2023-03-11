@@ -13,8 +13,7 @@ const interPromise = fetch(
 
 const edgeConfig =
 	process.env.EDGE_CONFIG ||
-	process.env.CONFIG_URL ||
-	(process.env.CONFIG_ID &&
+	(process.env.EDGE_CONFIG_ID &&
 		`https://edge-config.vercel.com/${process.env.EDGE_CONFIG_ID}?token=${process.env.EDGE_CONFIG_TOKEN}`);
 
 const client = edgeConfig ? createClient(edgeConfig) : undefined;
@@ -50,7 +49,10 @@ export default async function () {
 				>
 					<img
 						alt="Logo"
-						src="https://yeecord.com/img/logo.png"
+						src={
+							process.env.BOT_AVATAR_URL ||
+							"https://yeecord.com/img/logo.png"
+						}
 						width={56}
 						height={56}
 						style={{
