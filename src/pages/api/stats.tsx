@@ -127,8 +127,8 @@ export default async function Stats() {
 				},
 			],
 			headers: {
-				"content-type": "image/png",
-				"cache-control": "public, immutable, no-transform, max-age=60",
+				"Content-Type": "image/png",
+				"Cache-Control": "public, immutable, no-transform, max-age=60",
 			},
 		},
 	);
