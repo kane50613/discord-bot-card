@@ -100,6 +100,7 @@ export default async function () {
 					<span
 						style={{
 							paddingBottom: 4,
+							fontSize: 20,
 						}}
 					>
 						個伺服器
