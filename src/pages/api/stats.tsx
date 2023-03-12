@@ -12,7 +12,7 @@ const interPromise = fetch(
 ).then((r) => r.arrayBuffer());
 
 const sansMediumPromise = fetch(
-	new URL("../../assets/NotoSans-Medium.ttf", import.meta.url),
+	new URL("../../assets/NotoSans-Medium.woff", import.meta.url),
 ).then((r) => r.arrayBuffer());
 
 const edgeConfig =
