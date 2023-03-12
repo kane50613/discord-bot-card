@@ -11,10 +11,6 @@ const interPromise = fetch(
 	new URL("../../assets/Inter-Bold.woff", import.meta.url),
 ).then((r) => r.arrayBuffer());
 
-// const sansMediumPromise = fetch(
-// 	new URL("../../assets/NotoSans-Medium.woff", import.meta.url),
-// ).then((r) => r.arrayBuffer());
-
 const edgeConfig =
 	process.env.EDGE_CONFIG ||
 	(process.env.EDGE_CONFIG_ID &&
@@ -23,7 +19,6 @@ const edgeConfig =
 const client = edgeConfig ? createClient(edgeConfig) : undefined;
 
 export default async function Stats() {
-	// const sansMedium = await sansMediumPromise;
 	const inter = await interPromise;
 
 	const guilds = (await client?.get("guilds")) || 123456;
@@ -33,7 +28,6 @@ export default async function Stats() {
 			<div
 				lang="zh-TW"
 				style={{
-					fontFamily: "noto",
 					background: "linear-gradient(135deg, #3a3f5c, #202332)",
 					borderRadius: 7,
 					color: "white",
@@ -131,12 +125,6 @@ export default async function Stats() {
 					style: "normal",
 					weight: 700,
 				},
-				// {
-				// 	name: "noto",
-				// 	data: sansMedium,
-				// 	style: "normal",
-				// 	weight: 400
-				// },
 			],
 			headers: {
 				"Content-Type": "image/png",
