@@ -11,6 +11,10 @@ const interPromise = fetch(
 	new URL("../../assets/Inter-Bold.ttf", import.meta.url),
 ).then((r) => r.arrayBuffer());
 
+const sansMediumPromise = fetch(
+	new URL("../../assets/NotoSans-Medium.ttf", import.meta.url),
+).then((r) => r.arrayBuffer());
+
 const edgeConfig =
 	process.env.EDGE_CONFIG ||
 	(process.env.EDGE_CONFIG_ID &&
@@ -19,6 +23,7 @@ const edgeConfig =
 const client = edgeConfig ? createClient(edgeConfig) : undefined;
 
 export default async function Stats() {
+	const sansMedium = await sansMediumPromise;
 	const inter = await interPromise;
 
 	const guilds = (await client?.get("guilds")) || 123456;
@@ -69,10 +74,10 @@ export default async function Stats() {
 						<span
 							style={{
 								fontSize: 24,
-								fontWeight: 700,
+								fontWeight: 500,
 							}}
 						>
-							YEE式機器龍#9027
+							YEE式機器龍
 						</span>
 						<span
 							style={{
@@ -94,6 +99,7 @@ export default async function Stats() {
 				>
 					<span
 						style={{
+							fontFamily: "Inter",
 							fontSize: 36,
 							fontWeight: 700,
 							backgroundImage:
@@ -124,6 +130,12 @@ export default async function Stats() {
 					data: inter,
 					style: "normal",
 					weight: 700,
+				},
+				{
+					name: "noto",
+					data: sansMedium,
+					style: "normal",
+					weight: 500
 				},
 			],
 			headers: {
