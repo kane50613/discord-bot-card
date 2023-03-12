@@ -8,7 +8,7 @@ export const config = {
 const formatter = new Intl.NumberFormat();
 
 const interPromise = fetch(
-	new URL("../../assets/Inter-Bold.ttf", import.meta.url),
+	new URL("../../assets/Inter-Bold.woff", import.meta.url),
 ).then((r) => r.arrayBuffer());
 
 const sansMediumPromise = fetch(
@@ -135,7 +135,7 @@ export default async function Stats() {
 					name: "noto",
 					data: sansMedium,
 					style: "normal",
-					weight: 500
+					weight: 400
 				},
 			],
 			headers: {
