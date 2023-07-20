@@ -1,9 +1,7 @@
-import { ImageResponse } from "@vercel/og";
 import { createClient } from "@vercel/edge-config";
+import satori from "satori";
 
-export const config = {
-	runtime: "edge",
-};
+export const runtime = "edge";
 
 const formatter = new Intl.NumberFormat();
 
@@ -21,9 +19,9 @@ const client = edgeConfig ? createClient(edgeConfig) : undefined;
 export default async function Stats() {
 	const inter = await interPromise;
 
-	const guilds = (await client?.get("guilds")) || 123456;
+	const guilds = (await client?.get("guilds") as number) || 123456;
 
-	return new ImageResponse(
+	const image = await satori(
 		(
 			<div
 				lang="zh-TW"
@@ -126,10 +124,13 @@ export default async function Stats() {
 					weight: 700,
 				},
 			],
-			headers: {
-				"content-type": "image/png",
-				"cache-control": "public, immutable, no-transform, max-age=60",
-			},
 		},
 	);
+
+	return new Response(image, {
+		headers: {
+			"content-type": "image/svg+xml",
+			"cache-control": "public, immutable, no-transform, max-age=60",
+		},
+	})
 }
