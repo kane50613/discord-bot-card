@@ -1,8 +1,6 @@
 import { createClient } from "@vercel/edge-config";
 import satori from "satori";
 
-export const runtime = "edge";
-
 const formatter = new Intl.NumberFormat();
 
 const interPromise = fetch(
