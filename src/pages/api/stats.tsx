@@ -4,15 +4,15 @@ import satori from "satori";
 const formatter = new Intl.NumberFormat();
 
 const interPromise = fetch(
-	new URL("../../../assets/Inter-Bold.woff", import.meta.url),
+	new URL("../../fonts/Inter-Bold.woff", import.meta.url),
 ).then((r) => r.arrayBuffer());
 
 const notoPromise = fetch(
-	new URL("../../../assets/NotoSansTC-Medium.woff", import.meta.url),
+	new URL("../../fonts/NotoSansTC-Medium.woff", import.meta.url),
 ).then((r) => r.arrayBuffer());
 
 const notoBoldPromise = fetch(
-	new URL("../../../assets/NotoSansTC-Bold.woff", import.meta.url),
+	new URL("../../fonts/NotoSansTC-Bold.woff", import.meta.url),
 ).then((r) => r.arrayBuffer());
 
 const edgeConfig =
@@ -22,10 +22,8 @@ const edgeConfig =
 
 const client = edgeConfig ? createClient(edgeConfig) : undefined;
 
-export async function GET() {
-	const inter = await interPromise;
-	const noto = await notoPromise;
-	const notoBold = await notoBoldPromise;
+export default async function Stats() {
+	const [inter, noto, notoBold] = await Promise.all([interPromise, notoPromise, notoBoldPromise]) ;
 
 	const guilds = (await client?.get("guilds") as number) || 123456;
 
