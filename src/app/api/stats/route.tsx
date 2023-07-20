@@ -6,7 +6,15 @@ export const runtime = "edge";
 const formatter = new Intl.NumberFormat();
 
 const interPromise = fetch(
-	new URL("../../assets/Inter-Bold.woff", import.meta.url),
+	new URL("../../../assets/Inter-Bold.woff", import.meta.url),
+).then((r) => r.arrayBuffer());
+
+const notoPromise = fetch(
+	new URL("../../../assets/NotoSansTC-Medium.woff", import.meta.url),
+).then((r) => r.arrayBuffer());
+
+const notoBoldPromise = fetch(
+	new URL("../../../assets/NotoSansTC-Bold.woff", import.meta.url),
 ).then((r) => r.arrayBuffer());
 
 const edgeConfig =
@@ -16,8 +24,10 @@ const edgeConfig =
 
 const client = edgeConfig ? createClient(edgeConfig) : undefined;
 
-export default async function Stats() {
+export async function GET() {
 	const inter = await interPromise;
+	const noto = await notoPromise;
+	const notoBold = await notoBoldPromise;
 
 	const guilds = (await client?.get("guilds") as number) || 123456;
 
@@ -66,7 +76,7 @@ export default async function Stats() {
 						<span
 							style={{
 								fontSize: 24,
-								fontWeight: 500,
+								fontWeight: 700,
 							}}
 						>
 							YEE式機器龍
@@ -117,6 +127,18 @@ export default async function Stats() {
 			width: 480,
 			height: 180,
 			fonts: [
+				{
+					name: "Noto Sans TC",
+					weight: 500,
+					data: noto,
+					style: "normal",
+				},
+				{
+					name: "Noto Sans TC",
+					weight: 700,
+					data: notoBold,
+					style: "normal",
+				},
 				{
 					name: "Inter",
 					data: inter,
