@@ -8,7 +8,7 @@ export const config = {
 const formatter = new Intl.NumberFormat();
 
 const interPromise = fetch(
-  new URL("../../fonts/Inter-Bold.woff", import.meta.url),
+  new URL("../../fonts/Inter-Bold-subset.zopfli.woff", import.meta.url),
 ).then((r) => r.arrayBuffer());
 
 const notoPromise = fetch(
