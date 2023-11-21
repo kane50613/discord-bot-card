@@ -3,6 +3,10 @@ import { readFile } from "fs/promises";
 import satori from "satori";
 import { NextApiRequest, NextApiResponse } from "next";
 
+export const config = {
+	runtime: "edge",
+};
+
 const formatter = new Intl.NumberFormat();
 
 const interPromise = readFile(
@@ -10,11 +14,14 @@ const interPromise = readFile(
 );
 
 const notoPromise = readFile(
-	new URL("../../fonts/NotoSansTC-Medium.woff", import.meta.url),
+	new URL(
+		"../../fonts/NotoSansTC-Medium-subset.zopfli.woff",
+		import.meta.url,
+	),
 );
 
 const notoBoldPromise = readFile(
-	new URL("../../fonts/NotoSansTC-Bold.woff", import.meta.url),
+	new URL("../../fonts/NotoSansTC-Bold-subset.zopfli.woff", import.meta.url),
 );
 
 const edgeConfig =
