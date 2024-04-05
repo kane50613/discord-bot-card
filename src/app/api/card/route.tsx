@@ -8,7 +8,7 @@ export const runtime = "edge";
 
 const formatter = new Intl.NumberFormat();
 
-const dateFormater = new Intl.DateTimeFormat("zh-TW", {
+const dateFormater = new Intl.DateTimeFormat("zh-Hant-TW", {
   dateStyle: "short",
 });
 
