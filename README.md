@@ -11,3 +11,9 @@ Show your discord bot stats on your website as a svg card, the data is fetched f
 1. Deploy this repository to Vercel by clicking the button above
 2. Add `BOT_TOKEN` to the environment variables
 3. Head to `https://your-vercel-url/api/card` to get the card
+
+## Endpoints
+
+- `/api/card` - Get the card in svg format
+- `/api/card.jpeg` - Get the card in jpeg format
+- `/api/card.webp` - Get the card in webp format
