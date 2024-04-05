@@ -86,7 +86,7 @@ export async function GET(request: Request) {
         style={{
           display: "flex",
           alignItems: "flex-end",
-          gap: 16,
+          gap: 12,
           marginTop: 8,
         }}
       >
