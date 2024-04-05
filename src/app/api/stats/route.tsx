@@ -1,10 +1,16 @@
 import { getApplication, getUser } from "@/utils/api";
 import { getFont } from "@/utils/font";
+import { convertSnowflakeToDate } from "@/utils/snowflake";
+import removeMarkdown from "remove-markdown";
 import satori from "satori";
 
 export const runtime = "edge";
 
 const formatter = new Intl.NumberFormat();
+
+const dateFormater = new Intl.DateTimeFormat("zh-TW", {
+  dateStyle: "short",
+});
 
 export async function GET(request: Request) {
   const [inter, noto, notoBold] = await Promise.all([
@@ -17,6 +23,10 @@ export async function GET(request: Request) {
   const { id, avatar, globalName, username } = await getUser();
 
   const guilds = approximateGuildCount || 0;
+
+  const label = description
+    ? removeMarkdown(description).split("\n")[0]
+    : dateFormater.format(convertSnowflakeToDate(id));
 
   const image = await satori(
     <div
@@ -68,7 +78,7 @@ export async function GET(request: Request) {
           >
             {globalName || username}
           </span>
-          <span>{description || "這個使用者沒有設定自我介紹"}</span>
+          <span>{label}</span>
         </div>
       </div>
       <span>正在服務</span>
