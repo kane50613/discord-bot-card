@@ -4,7 +4,9 @@ import { Transformer } from "@napi-rs/image";
 export async function GET(request: Request) {
   const svg = await draw(request);
 
-  const webp = await Transformer.fromSvg(svg).crop(0, 0, 480, 180).webp();
+  const webp = await Transformer.fromSvg(svg)
+    .crop(0, 0, 480, 180)
+    .webpLossless();
 
   return new Response(webp, {
     headers: {
