@@ -1,39 +1,22 @@
-import { createClient } from "@vercel/edge-config";
+import { getApplication, getUser } from "@/utils/api";
+import { getFont } from "@/utils/font";
 import satori from "satori";
 
-export const config = {
-  runtime: "edge",
-};
+export const runtime = "edge";
 
 const formatter = new Intl.NumberFormat();
 
-const interPromise = fetch(
-  new URL("../../fonts/Inter-Bold-subset.zopfli.woff", import.meta.url),
-).then((r) => r.arrayBuffer());
-
-const notoPromise = fetch(
-  new URL("../../fonts/NotoSansTC-Medium-subset.zopfli.woff", import.meta.url),
-).then((r) => r.arrayBuffer());
-
-const notoBoldPromise = fetch(
-  new URL("../../fonts/NotoSansTC-Bold-subset.zopfli.woff", import.meta.url),
-).then((r) => r.arrayBuffer());
-
-const edgeConfig =
-  process.env.EDGE_CONFIG ||
-  (process.env.EDGE_CONFIG_ID &&
-    `https://edge-config.vercel.com/${process.env.EDGE_CONFIG_ID}?token=${process.env.EDGE_CONFIG_TOKEN}`);
-
-const client = edgeConfig ? createClient(edgeConfig) : undefined;
-
-export default async function Stats() {
+export async function GET(request: Request) {
   const [inter, noto, notoBold] = await Promise.all([
-    interPromise,
-    notoPromise,
-    notoBoldPromise,
+    getFont(request, "/Inter-Bold.woff"),
+    getFont(request, "/NotoSansCJKtc-Medium.woff"),
+    getFont(request, "/NotoSansCJKtc-Bold.woff"),
   ]);
 
-  const guilds = ((await client?.get("guilds")) as number) || 123456;
+  const { approximateGuildCount, description } = await getApplication();
+  const { id, avatar, globalName, username } = await getUser();
+
+  const guilds = approximateGuildCount || 0;
 
   const image = await satori(
     <div
@@ -59,7 +42,11 @@ export default async function Stats() {
       >
         <img
           alt="Logo"
-          src={process.env.BOT_AVATAR_URL || "https://yeecord.com/img/logo.png"}
+          src={
+            avatar
+              ? `https://cdn.discordapp.com/avatars/${id}/${avatar}.png?size=128`
+              : "https://yeecord.com/img/logo.png"
+          }
           width={56}
           height={56}
           style={{
@@ -79,15 +66,9 @@ export default async function Stats() {
               fontWeight: 700,
             }}
           >
-            YEE式機器龍
+            {globalName || username}
           </span>
-          <span
-            style={{
-              color: "#c4c4c4",
-            }}
-          >
-            萬中選一的 Discord 機器人
-          </span>
+          <span>{description || "這個使用者沒有設定自我介紹"}</span>
         </div>
       </div>
       <span>正在服務</span>

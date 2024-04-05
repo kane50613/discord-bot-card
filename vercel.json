@@ -1,8 +1,8 @@
 {
-	"redirects": [
-		{
-			"source": "/",
-			"destination": "https://github.com/Gary50613/discord-bot-profile-stats"
-		}
-	]
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://github.com/kane50613/discord-bot-profile-stats"
+    }
+  ]
 }
