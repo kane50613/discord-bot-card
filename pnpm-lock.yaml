@@ -8,6 +8,18 @@ dependencies:
   '@discordeno/rest':
     specifier: 19.0.0-next.d81b28a
     version: 19.0.0-next.d81b28a
+  '@napi-rs/canvas':
+    specifier: ^0.1.51
+    version: 0.1.51
+  '@napi-rs/image':
+    specifier: ^1.9.1
+    version: 1.9.1
+  '@resvg/resvg-js':
+    specifier: ^2.6.2
+    version: 2.6.2
+  '@resvg/resvg-wasm':
+    specifier: ^2.6.2
+    version: 2.6.2
   '@t3-oss/env-nextjs':
     specifier: ^0.9.2
     version: 0.9.2(typescript@5.4.4)(zod@3.22.4)
@@ -94,6 +106,22 @@ packages:
       tweetnacl: 1.0.3
     dev: false
 
+  /@emnapi/core@1.1.1:
+    resolution: {integrity: sha512-eu4KjHfXg3I+UUR7vSuwZXpRo4c8h4Rtb5Lu2F7Z4JqJFl/eidquONEBiRs6viXKpWBC3BaJBy68xGJ2j56idw==, tarball: https://registry.npmjs.org/@emnapi/core/-/core-1.1.1.tgz}
+    requiresBuild: true
+    dependencies:
+      tslib: 2.6.2
+    dev: false
+    optional: true
+
+  /@emnapi/runtime@1.1.1:
+    resolution: {integrity: sha512-3bfqkzuR1KLx57nZfjr2NLnFOobvyS0aTszaEGCGqmYMVDRaGvgIZbjGSV/MHSSmLgQ/b9JFHQ5xm5WRZYd+XQ==, tarball: https://registry.npmjs.org/@emnapi/runtime/-/runtime-1.1.1.tgz}
+    requiresBuild: true
+    dependencies:
+      tslib: 2.6.2
+    dev: false
+    optional: true
+
   /@eslint-community/eslint-utils@4.4.0(eslint@8.57.0):
     resolution: {integrity: sha512-1/sA4dwrzBAyeUoQ6oxahHKmrZvsnLCg4RfxW3ZFGGmQkSNQPFNLV9CUEFQP1x9EYXHTo5p6xdhZM1Ne9p/AfA==, tarball: https://registry.npmjs.org/@eslint-community/eslint-utils/-/eslint-utils-4.4.0.tgz}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -162,6 +190,239 @@ packages:
       wrap-ansi: 8.1.0
       wrap-ansi-cjs: /wrap-ansi@7.0.0
     dev: true
+
+  /@napi-rs/canvas-android-arm64@0.1.51:
+    resolution: {integrity: sha512-PAUA67PN+DuhvudfeIK+Ts9jnKhqgBrQkoZL9i9gV5tG3064bKOss7AJONGbDWOaSVSrmv6by1vsS25uputLYg==, tarball: https://registry.npmjs.org/@napi-rs/canvas-android-arm64/-/canvas-android-arm64-0.1.51.tgz}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [android]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@napi-rs/canvas-darwin-arm64@0.1.51:
+    resolution: {integrity: sha512-HUSeqDqwxGRZ/XwEHdVj1V0d6qhHkMZnmkxZz1dUA1Qe5cl18TzW5LUq03yt4/zP/fYfjkqXCPchRYJoQiXc6g==, tarball: https://registry.npmjs.org/@napi-rs/canvas-darwin-arm64/-/canvas-darwin-arm64-0.1.51.tgz}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@napi-rs/canvas-darwin-x64@0.1.51:
+    resolution: {integrity: sha512-HuppKkD3B+DWSAdAvrJjPhuqSX4zZv4kdw9+LDAoNvoYbq1USn96MnwYdIuH+XxNswuVsdBiB45hfK7elLLWjA==, tarball: https://registry.npmjs.org/@napi-rs/canvas-darwin-x64/-/canvas-darwin-x64-0.1.51.tgz}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@napi-rs/canvas-linux-arm-gnueabihf@0.1.51:
+    resolution: {integrity: sha512-Dr92419tDE0E8/bIWT3rdTzAj+C7ySP9HIwtvxTx+X7vJO3G7+D8fTYHe1TpYtiBq81RcMmcqLbpl5DXAPNuIw==, tarball: https://registry.npmjs.org/@napi-rs/canvas-linux-arm-gnueabihf/-/canvas-linux-arm-gnueabihf-0.1.51.tgz}
+    engines: {node: '>= 10'}
+    cpu: [arm]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@napi-rs/canvas-linux-arm64-gnu@0.1.51:
+    resolution: {integrity: sha512-swv6JPtL72UYc3sne52QvYJ8aU8FQ0OZ3kGrLa7M9u4FUJJREnQ1MhqA8vj1IrdxUIeBZvBvakk+koiA7o/eXw==, tarball: https://registry.npmjs.org/@napi-rs/canvas-linux-arm64-gnu/-/canvas-linux-arm64-gnu-0.1.51.tgz}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@napi-rs/canvas-linux-arm64-musl@0.1.51:
+    resolution: {integrity: sha512-dKhVNJ3DGX+vf0EnQ6356suRAT3BPxfcmV6DzDjONro54eDoJM1UCb4Ujamq7aCcVu9aYIIoed8i7GNRDknfTA==, tarball: https://registry.npmjs.org/@napi-rs/canvas-linux-arm64-musl/-/canvas-linux-arm64-musl-0.1.51.tgz}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@napi-rs/canvas-linux-x64-gnu@0.1.51:
+    resolution: {integrity: sha512-g6SCDxT1glof0GcZVbfqLEWQQChRulM+pKJW2p2GquCi//MFwqVsjiD9Pld77FYjiXnXfLHavGNZ0oh0AdZM/A==, tarball: https://registry.npmjs.org/@napi-rs/canvas-linux-x64-gnu/-/canvas-linux-x64-gnu-0.1.51.tgz}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@napi-rs/canvas-linux-x64-musl@0.1.51:
+    resolution: {integrity: sha512-YFklknFT2Mj6Wx15NpWag8GKNjC/ca/Uap7Pb56pt0lLe1Vz2/JLxiolmUwnuAN/xcdwuIpUGKmEeLqc4W+/+w==, tarball: https://registry.npmjs.org/@napi-rs/canvas-linux-x64-musl/-/canvas-linux-x64-musl-0.1.51.tgz}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@napi-rs/canvas-win32-x64-msvc@0.1.51:
+    resolution: {integrity: sha512-n+sgQ6hr1hgxAFIozUhgSlsswFxOl51HNuMAz1EA9M+jh6yIMopO+6RV55j6yYX0Vxkqbj9wkkaEIC3uQisGAg==, tarball: https://registry.npmjs.org/@napi-rs/canvas-win32-x64-msvc/-/canvas-win32-x64-msvc-0.1.51.tgz}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@napi-rs/canvas@0.1.51:
+    resolution: {integrity: sha512-9cD1BQk0kPrdLxdSPFEL7c9oeNPGZLEDn2F/Ctui7hoIdJLRm34BSW5/88UJbmgWVLM5+Ju/XKM1Rny3z3bhfQ==, tarball: https://registry.npmjs.org/@napi-rs/canvas/-/canvas-0.1.51.tgz}
+    engines: {node: '>= 10'}
+    optionalDependencies:
+      '@napi-rs/canvas-android-arm64': 0.1.51
+      '@napi-rs/canvas-darwin-arm64': 0.1.51
+      '@napi-rs/canvas-darwin-x64': 0.1.51
+      '@napi-rs/canvas-linux-arm-gnueabihf': 0.1.51
+      '@napi-rs/canvas-linux-arm64-gnu': 0.1.51
+      '@napi-rs/canvas-linux-arm64-musl': 0.1.51
+      '@napi-rs/canvas-linux-x64-gnu': 0.1.51
+      '@napi-rs/canvas-linux-x64-musl': 0.1.51
+      '@napi-rs/canvas-win32-x64-msvc': 0.1.51
+    dev: false
+
+  /@napi-rs/image-android-arm64@1.9.1:
+    resolution: {integrity: sha512-+YP3G3oWRRBNH+2KF025qxKnSfmB0wpBZ+5p3my5zwtW92r8xJj1nLpLMRjDpq7mbH49QFPtXG5JW0OAW/ibJg==, tarball: https://registry.npmjs.org/@napi-rs/image-android-arm64/-/image-android-arm64-1.9.1.tgz}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [android]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@napi-rs/image-darwin-arm64@1.9.1:
+    resolution: {integrity: sha512-Al9cNMmoZCQ71aM7FofncPwv/pQ/rmrCxjLQwkSa0VukjCdV6FfNhkpdO4eagnYRveoHE2BPA7MfxveuuztnLQ==, tarball: https://registry.npmjs.org/@napi-rs/image-darwin-arm64/-/image-darwin-arm64-1.9.1.tgz}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@napi-rs/image-darwin-x64@1.9.1:
+    resolution: {integrity: sha512-hGsAXOEB8UnQxegHSNQiMzhAkXt7qOL8w0tm4J4iz/j/j30MhOaIh5RjRgrok0Ujd9DF7565awdKViqRFT2QWg==, tarball: https://registry.npmjs.org/@napi-rs/image-darwin-x64/-/image-darwin-x64-1.9.1.tgz}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@napi-rs/image-freebsd-x64@1.9.1:
+    resolution: {integrity: sha512-ocj0su+PCdwH2+OnaRYCr2DodU3ygPBJfAsuth4Bjm1vYoAtV5O9TScPjNy2KF3QYKx5mRiLMtJMQgpgYy8O3A==, tarball: https://registry.npmjs.org/@napi-rs/image-freebsd-x64/-/image-freebsd-x64-1.9.1.tgz}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [freebsd]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@napi-rs/image-linux-arm-gnueabihf@1.9.1:
+    resolution: {integrity: sha512-6ULZMRN7rE4SgunlLBnLr4/ntgSD2tHh1Yl66VItbe+CZ0IQQeNO8SRRPm369X+MUVBu7P4/LJAQ6biOXpwSdw==, tarball: https://registry.npmjs.org/@napi-rs/image-linux-arm-gnueabihf/-/image-linux-arm-gnueabihf-1.9.1.tgz}
+    engines: {node: '>= 10'}
+    cpu: [arm]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@napi-rs/image-linux-arm64-gnu@1.9.1:
+    resolution: {integrity: sha512-haLLJ+uyhAYWf+HRUYjPd4zqyNsaCFixOjG5t+Ha/v6jBBm62HfT/LICEB0UhNpsyAIzN3rBncFNpGFQa4W+NQ==, tarball: https://registry.npmjs.org/@napi-rs/image-linux-arm64-gnu/-/image-linux-arm64-gnu-1.9.1.tgz}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@napi-rs/image-linux-arm64-musl@1.9.1:
+    resolution: {integrity: sha512-TBjDF+ezl6iB0RSFHqW+2P9MUUE9jcwT5hqBQ9MkCRUFZAMZVITCUmth4ZDQl65SYA7UoyBcaX7FTRzMuqAiTA==, tarball: https://registry.npmjs.org/@napi-rs/image-linux-arm64-musl/-/image-linux-arm64-musl-1.9.1.tgz}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@napi-rs/image-linux-x64-gnu@1.9.1:
+    resolution: {integrity: sha512-SZmwz4cC2Hwj8/Q3/aSEOEcPltUWl4ECx9ZWd3KqqmqIR51fZhIvbVzm8vCQv3354Wn3d+P0IoIWDzGgy09qaQ==, tarball: https://registry.npmjs.org/@napi-rs/image-linux-x64-gnu/-/image-linux-x64-gnu-1.9.1.tgz}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@napi-rs/image-linux-x64-musl@1.9.1:
+    resolution: {integrity: sha512-GtHMCtjl+Ymg3hDAn7KvWW6bjVooSdBtFs5JW8MHZEm+EURaj0+twCPR0l832pK1BOpXiuzRCThmx17hY45BBQ==, tarball: https://registry.npmjs.org/@napi-rs/image-linux-x64-musl/-/image-linux-x64-musl-1.9.1.tgz}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@napi-rs/image-wasm32-wasi@1.9.1:
+    resolution: {integrity: sha512-ddm8j1fLiHaM035Zsu79QiQWL3wHETRZbh2JzF/ZbikLOF7slHqmZKc3dFXQl8iYm8OUxOmjnDr5uBZLSMP/Eg==, tarball: https://registry.npmjs.org/@napi-rs/image-wasm32-wasi/-/image-wasm32-wasi-1.9.1.tgz}
+    engines: {node: '>=14.0.0'}
+    cpu: [wasm32]
+    requiresBuild: true
+    dependencies:
+      '@napi-rs/wasm-runtime': 0.1.2
+    dev: false
+    optional: true
+
+  /@napi-rs/image-win32-ia32-msvc@1.9.1:
+    resolution: {integrity: sha512-9p/WVNvirq0/s03gUrD6UzljN4/Ktt1Zcw1W2vzozH39lg0LqSwI/BpesTWRPSjPzCq1WdA8rLbAa3jpOAN49Q==, tarball: https://registry.npmjs.org/@napi-rs/image-win32-ia32-msvc/-/image-win32-ia32-msvc-1.9.1.tgz}
+    engines: {node: '>= 10'}
+    cpu: [ia32]
+    os: [win32]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@napi-rs/image-win32-x64-msvc@1.9.1:
+    resolution: {integrity: sha512-8j7qK0rZOSLSLbM2AjXh4TwSu0H7tPA85Kq8WAEVPRtPo+9r3MsQCnko1H51AGigomR1LWg53co0MYTFipOFTg==, tarball: https://registry.npmjs.org/@napi-rs/image-win32-x64-msvc/-/image-win32-x64-msvc-1.9.1.tgz}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@napi-rs/image@1.9.1:
+    resolution: {integrity: sha512-NWf+fi0Fdfji/Q3JPetBaN2zJmBpl3zOEeCffnd3Q2YHgfTwwc9+tHKNDJ7Jf/70eXJTzEZxPHx0DDbJyNPSWQ==, tarball: https://registry.npmjs.org/@napi-rs/image/-/image-1.9.1.tgz}
+    engines: {node: '>= 10'}
+    optionalDependencies:
+      '@napi-rs/image-android-arm64': 1.9.1
+      '@napi-rs/image-darwin-arm64': 1.9.1
+      '@napi-rs/image-darwin-x64': 1.9.1
+      '@napi-rs/image-freebsd-x64': 1.9.1
+      '@napi-rs/image-linux-arm-gnueabihf': 1.9.1
+      '@napi-rs/image-linux-arm64-gnu': 1.9.1
+      '@napi-rs/image-linux-arm64-musl': 1.9.1
+      '@napi-rs/image-linux-x64-gnu': 1.9.1
+      '@napi-rs/image-linux-x64-musl': 1.9.1
+      '@napi-rs/image-wasm32-wasi': 1.9.1
+      '@napi-rs/image-win32-ia32-msvc': 1.9.1
+      '@napi-rs/image-win32-x64-msvc': 1.9.1
+    dev: false
+
+  /@napi-rs/wasm-runtime@0.1.2:
+    resolution: {integrity: sha512-8JuczewTFIZ/XIjHQ+YlQUydHvlKx2hkcxtuGwh+t/t5zWyZct6YG4+xjHcq8xyc/e7FmFwf42Zj2YgICwmlvA==, tarball: https://registry.npmjs.org/@napi-rs/wasm-runtime/-/wasm-runtime-0.1.2.tgz}
+    requiresBuild: true
+    dependencies:
+      '@emnapi/core': 1.1.1
+      '@emnapi/runtime': 1.1.1
+      '@tybys/wasm-util': 0.8.1
+    dev: false
+    optional: true
 
   /@next/env@14.1.4:
     resolution: {integrity: sha512-e7X7bbn3Z6DWnDi75UWn+REgAbLEqxI8Tq2pkFOFAMpWAWApz/YCUhtWMWn410h8Q2fYiYL7Yg5OlxMOCfFjJQ==, tarball: https://registry.npmjs.org/@next/env/-/env-14.1.4.tgz}
@@ -282,6 +543,137 @@ packages:
     dev: true
     optional: true
 
+  /@resvg/resvg-js-android-arm-eabi@2.6.2:
+    resolution: {integrity: sha512-FrJibrAk6v29eabIPgcTUMPXiEz8ssrAk7TXxsiZzww9UTQ1Z5KAbFJs+Z0Ez+VZTYgnE5IQJqBcoSiMebtPHA==, tarball: https://registry.npmjs.org/@resvg/resvg-js-android-arm-eabi/-/resvg-js-android-arm-eabi-2.6.2.tgz}
+    engines: {node: '>= 10'}
+    cpu: [arm]
+    os: [android]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@resvg/resvg-js-android-arm64@2.6.2:
+    resolution: {integrity: sha512-VcOKezEhm2VqzXpcIJoITuvUS/fcjIw5NA/w3tjzWyzmvoCdd+QXIqy3FBGulWdClvp4g+IfUemigrkLThSjAQ==, tarball: https://registry.npmjs.org/@resvg/resvg-js-android-arm64/-/resvg-js-android-arm64-2.6.2.tgz}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [android]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@resvg/resvg-js-darwin-arm64@2.6.2:
+    resolution: {integrity: sha512-nmok2LnAd6nLUKI16aEB9ydMC6Lidiiq2m1nEBDR1LaaP7FGs4AJ90qDraxX+CWlVuRlvNjyYJTNv8qFjtL9+A==, tarball: https://registry.npmjs.org/@resvg/resvg-js-darwin-arm64/-/resvg-js-darwin-arm64-2.6.2.tgz}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@resvg/resvg-js-darwin-x64@2.6.2:
+    resolution: {integrity: sha512-GInyZLjgWDfsVT6+SHxQVRwNzV0AuA1uqGsOAW+0th56J7Nh6bHHKXHBWzUrihxMetcFDmQMAX1tZ1fZDYSRsw==, tarball: https://registry.npmjs.org/@resvg/resvg-js-darwin-x64/-/resvg-js-darwin-x64-2.6.2.tgz}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@resvg/resvg-js-linux-arm-gnueabihf@2.6.2:
+    resolution: {integrity: sha512-YIV3u/R9zJbpqTTNwTZM5/ocWetDKGsro0SWp70eGEM9eV2MerWyBRZnQIgzU3YBnSBQ1RcxRZvY/UxwESfZIw==, tarball: https://registry.npmjs.org/@resvg/resvg-js-linux-arm-gnueabihf/-/resvg-js-linux-arm-gnueabihf-2.6.2.tgz}
+    engines: {node: '>= 10'}
+    cpu: [arm]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@resvg/resvg-js-linux-arm64-gnu@2.6.2:
+    resolution: {integrity: sha512-zc2BlJSim7YR4FZDQ8OUoJg5holYzdiYMeobb9pJuGDidGL9KZUv7SbiD4E8oZogtYY42UZEap7dqkkYuA91pg==, tarball: https://registry.npmjs.org/@resvg/resvg-js-linux-arm64-gnu/-/resvg-js-linux-arm64-gnu-2.6.2.tgz}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@resvg/resvg-js-linux-arm64-musl@2.6.2:
+    resolution: {integrity: sha512-3h3dLPWNgSsD4lQBJPb4f+kvdOSJHa5PjTYVsWHxLUzH4IFTJUAnmuWpw4KqyQ3NA5QCyhw4TWgxk3jRkQxEKg==, tarball: https://registry.npmjs.org/@resvg/resvg-js-linux-arm64-musl/-/resvg-js-linux-arm64-musl-2.6.2.tgz}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@resvg/resvg-js-linux-x64-gnu@2.6.2:
+    resolution: {integrity: sha512-IVUe+ckIerA7xMZ50duAZzwf1U7khQe2E0QpUxu5MBJNao5RqC0zwV/Zm965vw6D3gGFUl7j4m+oJjubBVoftw==, tarball: https://registry.npmjs.org/@resvg/resvg-js-linux-x64-gnu/-/resvg-js-linux-x64-gnu-2.6.2.tgz}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@resvg/resvg-js-linux-x64-musl@2.6.2:
+    resolution: {integrity: sha512-UOf83vqTzoYQO9SZ0fPl2ZIFtNIz/Rr/y+7X8XRX1ZnBYsQ/tTb+cj9TE+KHOdmlTFBxhYzVkP2lRByCzqi4jQ==, tarball: https://registry.npmjs.org/@resvg/resvg-js-linux-x64-musl/-/resvg-js-linux-x64-musl-2.6.2.tgz}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@resvg/resvg-js-win32-arm64-msvc@2.6.2:
+    resolution: {integrity: sha512-7C/RSgCa+7vqZ7qAbItfiaAWhyRSoD4l4BQAbVDqRRsRgY+S+hgS3in0Rxr7IorKUpGE69X48q6/nOAuTJQxeQ==, tarball: https://registry.npmjs.org/@resvg/resvg-js-win32-arm64-msvc/-/resvg-js-win32-arm64-msvc-2.6.2.tgz}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@resvg/resvg-js-win32-ia32-msvc@2.6.2:
+    resolution: {integrity: sha512-har4aPAlvjnLcil40AC77YDIk6loMawuJwFINEM7n0pZviwMkMvjb2W5ZirsNOZY4aDbo5tLx0wNMREp5Brk+w==, tarball: https://registry.npmjs.org/@resvg/resvg-js-win32-ia32-msvc/-/resvg-js-win32-ia32-msvc-2.6.2.tgz}
+    engines: {node: '>= 10'}
+    cpu: [ia32]
+    os: [win32]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@resvg/resvg-js-win32-x64-msvc@2.6.2:
+    resolution: {integrity: sha512-ZXtYhtUr5SSaBrUDq7DiyjOFJqBVL/dOBN7N/qmi/pO0IgiWW/f/ue3nbvu9joWE5aAKDoIzy/CxsY0suwGosQ==, tarball: https://registry.npmjs.org/@resvg/resvg-js-win32-x64-msvc/-/resvg-js-win32-x64-msvc-2.6.2.tgz}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@resvg/resvg-js@2.6.2:
+    resolution: {integrity: sha512-xBaJish5OeGmniDj9cW5PRa/PtmuVU3ziqrbr5xJj901ZDN4TosrVaNZpEiLZAxdfnhAe7uQ7QFWfjPe9d9K2Q==, tarball: https://registry.npmjs.org/@resvg/resvg-js/-/resvg-js-2.6.2.tgz}
+    engines: {node: '>= 10'}
+    optionalDependencies:
+      '@resvg/resvg-js-android-arm-eabi': 2.6.2
+      '@resvg/resvg-js-android-arm64': 2.6.2
+      '@resvg/resvg-js-darwin-arm64': 2.6.2
+      '@resvg/resvg-js-darwin-x64': 2.6.2
+      '@resvg/resvg-js-linux-arm-gnueabihf': 2.6.2
+      '@resvg/resvg-js-linux-arm64-gnu': 2.6.2
+      '@resvg/resvg-js-linux-arm64-musl': 2.6.2
+      '@resvg/resvg-js-linux-x64-gnu': 2.6.2
+      '@resvg/resvg-js-linux-x64-musl': 2.6.2
+      '@resvg/resvg-js-win32-arm64-msvc': 2.6.2
+      '@resvg/resvg-js-win32-ia32-msvc': 2.6.2
+      '@resvg/resvg-js-win32-x64-msvc': 2.6.2
+    dev: false
+
+  /@resvg/resvg-wasm@2.6.2:
+    resolution: {integrity: sha512-FqALmHI8D4o6lk/LRWDnhw95z5eO+eAa6ORjVg09YRR7BkcM6oPHU9uyC0gtQG5vpFLvgpeU4+zEAz2H8APHNw==, tarball: https://registry.npmjs.org/@resvg/resvg-wasm/-/resvg-wasm-2.6.2.tgz}
+    engines: {node: '>= 10'}
+    dev: false
+
   /@rushstack/eslint-patch@1.10.1:
     resolution: {integrity: sha512-S3Kq8e7LqxkA9s7HKLqXGTGck1uwis5vAXan3FnU5yw1Ec5hsSGnq4s/UCaSqABPOnOTg7zASLyst7+ohgWexg==, tarball: https://registry.npmjs.org/@rushstack/eslint-patch/-/eslint-patch-1.10.1.tgz}
     dev: true
@@ -327,6 +719,14 @@ packages:
       typescript: 5.4.4
       zod: 3.22.4
     dev: false
+
+  /@tybys/wasm-util@0.8.1:
+    resolution: {integrity: sha512-GSsTwyBl4pIzsxAY5wroZdyQKyhXk0d8PCRZtrSZ2WEB1cBdrp2EgGBwHOGCZtIIPun/DL3+AykCv+J6fyRH4Q==, tarball: https://registry.npmjs.org/@tybys/wasm-util/-/wasm-util-0.8.1.tgz}
+    requiresBuild: true
+    dependencies:
+      tslib: 2.6.2
+    dev: false
+    optional: true
 
   /@types/json5@0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==, tarball: https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz}
