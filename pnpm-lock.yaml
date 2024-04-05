@@ -11,9 +11,6 @@ dependencies:
   '@t3-oss/env-nextjs':
     specifier: ^0.9.2
     version: 0.9.2(typescript@5.4.4)(zod@3.22.4)
-  '@vercel/edge-config':
-    specifier: ^1.1.0
-    version: 1.1.0(typescript@5.4.4)
   next:
     specifier: 14.1.4
     version: 14.1.4(react-dom@18.2.0)(react@18.2.0)
@@ -429,25 +426,6 @@ packages:
   /@ungap/structured-clone@1.2.0:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==, tarball: https://registry.npmjs.org/@ungap/structured-clone/-/structured-clone-1.2.0.tgz}
     dev: true
-
-  /@vercel/edge-config-fs@0.1.0:
-    resolution: {integrity: sha512-NRIBwfcS0bUoUbRWlNGetqjvLSwgYH/BqKqDN7vK1g32p7dN96k0712COgaz6VFizAm9b0g6IG6hR6+hc0KCPg==, tarball: https://registry.npmjs.org/@vercel/edge-config-fs/-/edge-config-fs-0.1.0.tgz}
-    dev: false
-
-  /@vercel/edge-config@1.1.0(typescript@5.4.4):
-    resolution: {integrity: sha512-es/4BzzKfyUilL5E1knR42MZHJqHMRfqitrnv18gVZZUha9ywrX3qNoCrPsNMJ1HS8xAAz/FJEyel7YFIDfKoQ==, tarball: https://registry.npmjs.org/@vercel/edge-config/-/edge-config-1.1.0.tgz}
-    engines: {node: '>=14.6'}
-    peerDependencies:
-      '@opentelemetry/api': ^1.7.0
-    peerDependenciesMeta:
-      '@opentelemetry/api':
-        optional: true
-    dependencies:
-      '@vercel/edge-config-fs': 0.1.0
-      ts-essentials: 9.4.1(typescript@5.4.4)
-    transitivePeerDependencies:
-      - typescript
-    dev: false
 
   /acorn-jsx@5.3.2(acorn@8.11.3):
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==, tarball: https://registry.npmjs.org/acorn-jsx/-/acorn-jsx-5.3.2.tgz}
@@ -2552,17 +2530,6 @@ packages:
     dependencies:
       typescript: 5.4.4
     dev: true
-
-  /ts-essentials@9.4.1(typescript@5.4.4):
-    resolution: {integrity: sha512-oke0rI2EN9pzHsesdmrOrnqv1eQODmJpd/noJjwj2ZPC3Z4N2wbjrOEqnsEgmvlO2+4fBb0a794DCna2elEVIQ==, tarball: https://registry.npmjs.org/ts-essentials/-/ts-essentials-9.4.1.tgz}
-    peerDependencies:
-      typescript: '>=4.1.0'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      typescript: 5.4.4
-    dev: false
 
   /tsconfig-paths@3.15.0:
     resolution: {integrity: sha512-2Ac2RgzDe/cn48GvOe3M+o82pEFewD3UPbyoUHHdKasHwJKjds4fLXWf/Ux5kATBKN20oaFGu+jbElp1pos0mg==, tarball: https://registry.npmjs.org/tsconfig-paths/-/tsconfig-paths-3.15.0.tgz}
