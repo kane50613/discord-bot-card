@@ -4,6 +4,11 @@
       "source": "/",
       "destination": "/api/card",
       "statusCode": 302
+    },
+    {
+      "source": "/api/stats",
+      "destination": "/api/card",
+      "statusCode": 302
     }
   ]
 }
